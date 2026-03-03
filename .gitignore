@@ -1,0 +1,38 @@
+# Dependencies
+# Never commit this; it can be gigabytes in size.
+node_modules/
+jspm_packages/
+
+# Production Build
+# These are generated files. No need to track them.
+/build
+/dist
+/out
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Windows system files
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# VS Code specific
+# Ignore the workspace settings, but keep extensions if preferred
+.vscode/*
+!.vscode/extensions.json
+.history/
+*.code-workspace
+
+# Local environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Project-specific secrets
+*.pem
+
