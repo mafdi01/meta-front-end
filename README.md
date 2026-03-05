@@ -42,6 +42,21 @@ To optimize the Largest Contentful Paint (LCP), images are requested with dynami
 
 - auto=format: Serves next-gen formats (WebP/AVIF) based on browser support.
 
+#### 4. Interactive Navigation & UX
+I implemented JavaScript to enhance the header's functionality, ensuring a seamless navigation experience as users explore the jewelry collections:
+
+- Sticky Header Logic: Developed a scroll-detection script that toggles a .scrolled class, providing a persistent navigation bar that improves the User Journey without obscuring content.
+
+- Event Handling: Utilized optimized event listeners to manage mobile menu states, ensuring high input responsiveness.
+
+```JavaScript 
+// Example of the Sticky Header Logic
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    header.classList.toggle('window-scroll', window.scrollY > 0);
+});
+```
+
 ### How to Run Locally
 1. Clone the repository:
 git clone [https://github.com/mafdi01/meta-front-end.git](https://github.com/mafdi01/meta-front-end.git)
