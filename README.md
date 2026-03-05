@@ -18,6 +18,7 @@ A responsive, high-end jewelry storefront developed as part of the **Meta Front-
 - **Visual Branding:** Implements a "Carbon Black" and "Champagne Gold" color palette to reflect a luxury aesthetic.
 - **Performance Optimization:** Integrated Unsplash API parameters to serve responsive.
 - **Accessible Navigation:** Semantic HTML5 structure with fragment identifiers for direct section linking.
+- **Interactive Header:** Utilized CSS and Vanilla JavaScript to hide or show navigation header depending on scrolling.
 
 ---
 
@@ -42,19 +43,24 @@ To optimize the Largest Contentful Paint (LCP), images are requested with dynami
 
 - auto=format: Serves next-gen formats (WebP/AVIF) based on browser support.
 
-#### 4. Interactive Navigation & UX
-I implemented JavaScript to enhance the header's functionality, ensuring a seamless navigation experience as users explore the jewelry collections:
+#### 4. Smart Navigation Interactivity
+To maximize screen real estate—especially for mobile users viewing high-end jewelry imagery—I engineered a "Smart Header" using vanilla JavaScript.
 
-- Sticky Header Logic: Developed a scroll-detection script that toggles a .scrolled class, providing a persistent navigation bar that improves the User Journey without obscuring content.
+- Scroll-Direction Detection: The script compares currentScrollY against lastScrollY to determine user intent.
 
-- Event Handling: Utilized optimized event listeners to manage mobile menu states, ensuring high input responsiveness.
+- State Management: It dynamically toggles a .header-hidden class based on a scroll threshold (>100px), ensuring the navigation is unobtrusive during deep-page dives.
 
-```JavaScript 
-// Example of the Sticky Header Logic
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    header.classList.toggle('window-scroll', window.scrollY > 0);
-});
+```css
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: transform 0.4s ease-in-out;
+}
+
+.header-hidden {
+    transform: translateY(-100%);
+}
 ```
 
 ### How to Run Locally
