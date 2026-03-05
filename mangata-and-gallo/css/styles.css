@@ -1,0 +1,465 @@
+/* ==========================================================================
+   1. SETUP: RESETS & VARIABLES
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Carbon Black */
+    --color-primary: #1A1A1B;
+
+    /* Champagne Gold */
+    --color-accent: #D4AF37;
+
+    /* Ivory Silk */
+    --color-bg: #F9F7F2;
+
+    /* Deep Slate */
+    --color-text: #333;
+
+    /* Silver Mist */
+    --color-border: #E0E0E0;
+
+    /* Layout Variables */
+    --header-height: 120px;
+}
+
+/* ==========================================================================
+   2. BASE ELEMENTS & TYPOGRAPHY
+   ========================================================================== */
+
+html {
+    font-size: 20px;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--color-primary);
+}
+
+a {
+    font-family: 'Playfair Display', serif;
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+img {
+    width: 100%;
+
+    /* Removes bottom whitespace in containers */
+    display: block;
+}
+
+/* ==========================================================================
+   3. SHARED COMPONENTS (Buttons, Icons, etc.)
+   ========================================================================== */
+
+.icon {
+    width: 24px;
+    height: 24px;
+    stroke-width: 1.5px;
+    transition: stroke 0.3s ease;
+}
+
+.icon:hover {
+    stroke: var(--color-accent);
+}
+
+.cta-button {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    padding: 14px 28px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: 1px solid var(--color-primary);
+}
+
+.cta-button:hover {
+    background-color: transparent;
+    color: var(--color-primary);
+}
+
+/* ==========================================================================
+   4. LAYOUT: HEADER & NAVIGATION
+   ========================================================================== */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid var(--color-accent);
+    transition: transform 0.4s ease-in-out;
+}
+
+header img {
+    width: 40%;
+    margin: 0.25rem auto;
+    filter: invert(1);
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+    width: max-content;
+    margin: auto;
+}
+
+header ul a {
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 0.25rem;
+    display: block;
+    color: var(--color-bg);
+}
+
+header ul a:hover {
+    color: var(--color-accent);
+}
+
+/* ==========================================================================
+   5. CONTENT: PROMO BANNER
+   ========================================================================== */
+
+.promo-banner, .about-hero {
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+        linear-gradient(#1a1a1b99, #1a1a1b99),
+        url('https://images.unsplash.com/photo-1599708978061-501091150ec9?auto=format&fit=crop&q=80&w=1600');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--color-bg);
+    padding: 2rem;
+}
+
+.about-hero {
+    background:
+        linear-gradient(#1a1a1bb3, #1a1a1bb3),
+        url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=1600');
+}
+
+.promo-banner a:hover {
+    background-color: var(--color-accent);
+}
+
+.promo-banner-content {
+    max-width: 800px;
+}
+
+.promo-banner-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.promo-banner-title {
+    color: var(--color-bg);
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.promo-banner-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* ==========================================================================
+   6. CONTENT: PRODUCT GRID & CARDS
+   ========================================================================== */
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    width: 90%;
+}
+
+.products-grid h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px #0000000d;
+}
+
+.product-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.product-card-content {
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.product-card-title {
+    font-size: 1.5rem;
+}
+
+.product-card-description {
+    font-size: 0.9rem;
+    color: var(--color-text);
+}
+
+.product-card-price {
+    font-weight: bold;
+    color: var(--color-accent);
+    font-size: 1.2rem;
+    margin: 0.5rem;
+}
+
+/* ==========================================================================
+   7. LAYOUT: FOOTER
+   ========================================================================== */
+
+.main-footer {
+    background-color: var(--color-primary);
+    color: #f4f4f4;
+    padding: 4rem 2rem 2rem;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.footer-brand, .footer-nav, .footer-contact {
+    flex: 1 1 250px;
+}
+
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 1rem;
+    filter: brightness(0) invert(1);
+}
+
+.footer-heading {
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.2rem;
+    font-size: 0.8rem;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-nav a {
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover, .footer-contact a:hover {
+    color: var(--color-accent);
+}
+
+.footer-contact a {
+    color: inherit;
+    font-weight: bold;
+}
+
+.footer-socials {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-socials .icon {
+    stroke: var(--color-bg);
+    width: 20px;
+    height: 20px;
+}
+
+.footer-socials .icon:hover {
+    stroke: var(--color-accent);
+}
+
+address {
+    font-style: normal;
+    line-height: 1.6;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #f4f4f41a;
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+
+/* ==========================================================================
+   8. UTILITIES & STATE
+   ========================================================================== */
+
+.header-hidden {
+    transform: translateY(-100%);
+}
+
+/* ==========================================================================
+   9. ABOUT PAGE SPECIFICS
+   ========================================================================== */
+
+.content-section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.content-section.reverse .section-container {
+    flex-direction: row-reverse;
+}
+
+.text-block, .image-block {
+    flex: 1 1 400px;
+}
+
+.text-block h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.text-block h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-accent);
+    margin-top: 0.5rem;
+}
+
+.process-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.process-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--color-accent);
+}
+
+/* ==========================================================================
+   10. CONTACT PAGE STYLING
+   ========================================================================== */
+
+.form-block {
+    background: #f9f9f9;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px #0000000d;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.contact-item {
+    margin-top: 2rem;
+}
+
+.contact-item address a {
+    color: var(--color-primary);
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   11. RESPONSIVE QUERIES
+   ========================================================================== */
+
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+
+    header img, footer img {
+        width: 60%;
+    }
+}

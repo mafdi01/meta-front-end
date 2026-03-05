@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mafdi Bissada">
+    <meta name="description"
+        content="Mangata and Gallo is a fictional jewelry store that specializes in special occasions like engagements, weddings and anniversaries.">
+    <title>Mangata and Gallo - Luxury Jewelry</title>
+
+    <!--Google fonts - Start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,700&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
+    <!--Google fonts - End -->
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="assets/logos/2@3x.png" alt="Mangata and Gallo logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4H6z"></path>
+                            <path d="M3 6h18"></path>
+                            <path d="M16 10a4 4 0 01-8 0"></path>
+                        </svg>Products</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="about-hero">
+            <div class="promo-banner-content">
+                <h1 class="promo-banner-title">Let's Create Together</h1>
+                <p class="promo-banner-description">
+                    Whether you're planning a wedding or looking for a custom design,
+                    Mariana and her team are here to help.
+                </p>
+            </div>
+        </section>
+
+        <section class="contact-container content-section">
+            <div class="section-container">
+                <div class="text-block">
+                    <h2>Visit the Atelier</h2>
+                    <p>Located in the heart of the Domain, our storefront offers a curated
+                        browsing experience with a window into our working atelier.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <strong>Address:</strong>
+                            <address>
+                                <a href="https://goo.gl/maps/example" target="_blank" rel="noopener">
+                                    1104 Domain Dr.<br>
+                                    Austin, TX 78758
+                                </a>
+                            </address>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Inquiries:</strong>
+                            <p><a href="mailto:concierge@mangataandgallo.com">concierge@mangataandgallo.com</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-block">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Special Occasion</label>
+                            <select id="subject" name="subject">
+                                <option value="engagement">Engagement</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="anniversary">Anniversary</option>
+                                <option value="custom">Custom Design</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">How can Mariana help?</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="assets/logos/1@3x.png" alt="Mangata and Gallo home" class="footer-logo">
+                <p class="footer-tagline">Handcrafted elegance, born in Austin.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <nav class="footer-nav" aria-label="Footer Navigation">
+                <h2 class="footer-heading">The Collection</h2>
+                <ul>
+                    <li><a href="products.html">Engagement Rings</a></li>
+                    <li><a href="about.html#the-atelier">The Atelier</a></li>
+                    <li><a href="about.html#our-process">Our Process</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer-contact">
+                <h2 class="footer-heading">Visit Us</h2>
+                <address>
+                    1104 Domain Dr.<br>
+                    Austin, TX 78758<br>
+                    <a href="mailto:concierge@mangataandgallo.com">concierge@mangataandgallo.com</a>
+                </address>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mangata and Gallo. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
