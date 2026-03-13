@@ -1,6 +1,16 @@
 # meta-front-end
-Projects made for [Meta Front-End Developer Professional Certificate](https://www.coursera.org/professional-certificates/meta-front-end-developer) at Coursera
+Projects made for [Meta Front-End Developer Professional Certificate](https://www.coursera.org/professional-certificates/meta-front-end-developer) at Coursera.
 
+---
+
+## 🎯 Projects Overview
+These projects demonstrate proficiency in core Front-End principles, including semantic HTML, CSS styling, UX/UI Design, and React JS.
+
+| Project Title                       | Tech Stack | Live Demo                                                                                    | Source Code                                                                                         |
+| :---------------------------------- | :--------------- | :------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------- |
+| **Luxury Jewelry E-commerce**           | HTML, CSS, JS | [View Project](https://mafdi01.github.io/meta-front-end/mangata-and-gallo/index.html)                  | [Repo Folder](https://github.com/mafdi01/meta-front-end/tree/main/mangata-and-gallo)                  |
+
+---
 
 ## Mangata & Gallo | Luxury Jewelry E-commerce
 
